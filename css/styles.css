@@ -33,6 +33,7 @@
   width: 100px;
   height: 100px;
   border: 1px solid black;
+  cursor: pointer;
 }
 .board .cell:first-child, .board .cell:nth-child(2), .board .cell:nth-child(3) {
   border-top: none;
@@ -46,14 +47,15 @@
 .board .cell:last-child, .board .cell:nth-child(8), .board .cell:nth-child(7) {
   border-bottom: none;
 }
-.board .cell.x {
+.board .cell.x, .board .cell.o {
   font-family: "Indie Flower", cursive;
   font-size: 90px;
+  cursor: not-allowed;
+}
+.board .cell.x.x, .board .cell.o.x {
   color: red;
 }
-.board .cell.o {
-  font-family: "Indie Flower", cursive;
-  font-size: 90px;
+.board .cell.x.o, .board .cell.o.o {
   color: blue;
 }
 
@@ -64,17 +66,13 @@
   align-items: center;
   padding: 10px;
 }
-.social-box #linkedin-icon {
+.social-box .social-icon {
+  transition: transform 0.2s;
+}
+.social-box .social-icon:hover {
+  transform: scale(1.1);
+}
+.social-box .social-icon#linkedin {
   height: 78%;
   width: 78%;
-  transition: transform 0.2s;
-}
-.social-box #linkedin-icon:hover {
-  transform: scale(1.1);
-}
-.social-box #github-icon {
-  transition: transform 0.2s;
-}
-.social-box #github-icon:hover {
-  transform: scale(1.1);
 }/*# sourceMappingURL=styles.css.map */
