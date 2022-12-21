@@ -1,0 +1,75 @@
+@import 'index';
+// WRITE BELOW
+
+.hero-txt {
+    font-family: $code;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.board {
+    position: relative;
+    bottom: 10vh;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(3, auto);
+    .cell {
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        width: $cell-size;
+        height: $cell-size;
+        border: 1px solid black;
+        &:first-child, &:nth-child(2), &:nth-child(3) {
+            border-top: none;
+        }
+        &:nth-child(3n + 1) {
+            border-left: none;
+        }
+        &:nth-child(3n + 3) {
+            border-right: none;
+        }
+        &:last-child, &:nth-child(8), &:nth-child(7) {
+            border-bottom: none;
+        }
+        &.x {
+            font-family: $funny;
+            font-size: $mark-size;
+            color: red;
+        }
+        &.o {
+            font-family: $funny;
+            font-size: $mark-size;
+            color: blue;
+        }
+    }
+}
+
+.social-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px;
+    #linkedin-icon {
+        height: 78%;
+        width: 78%;
+        transition: transform 0.2s;
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+    #github-icon {
+        transition: transform 0.2s;
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}

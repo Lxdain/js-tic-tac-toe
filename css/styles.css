@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Indie+Flower&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.hero-txt {
+  font-family: "Fira Code", monospace;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.board {
+  position: relative;
+  bottom: 10vh;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: repeat(3, auto);
+}
+.board .cell {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+}
+.board .cell:first-child, .board .cell:nth-child(2), .board .cell:nth-child(3) {
+  border-top: none;
+}
+.board .cell:nth-child(3n+1) {
+  border-left: none;
+}
+.board .cell:nth-child(3n+3) {
+  border-right: none;
+}
+.board .cell:last-child, .board .cell:nth-child(8), .board .cell:nth-child(7) {
+  border-bottom: none;
+}
+.board .cell.x {
+  font-family: "Indie Flower", cursive;
+  font-size: 90px;
+  color: red;
+}
+.board .cell.o {
+  font-family: "Indie Flower", cursive;
+  font-size: 90px;
+  color: blue;
+}
+
+.social-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px;
+}
+.social-box #linkedin-icon {
+  height: 78%;
+  width: 78%;
+  transition: transform 0.2s;
+}
+.social-box #linkedin-icon:hover {
+  transform: scale(1.1);
+}
+.social-box #github-icon {
+  transition: transform 0.2s;
+}
+.social-box #github-icon:hover {
+  transform: scale(1.1);
+}/*# sourceMappingURL=styles.css.map */
